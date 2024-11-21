@@ -4,13 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me - Pappu Sanodiya</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-color: aqua;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      text-align: center;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      color: darkblue;
+    }
+    p {
+      color: darkgreen;
+      font-size: 18px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <h1>About Me</h1>
     <p id="about"></p>
   </div>
-  <script src="script.js"></script>
+  <script>
+    // About Me details
+    const aboutMe = {
+      name: "Pappu Sanodiya",
+      role: "DevOps Engineer",
+      company: "Defenzelite Private Limited",
+      location: "Headquarters in Seoni, MP",
+    };
+
+    // Render About Me details in the paragraph
+    const aboutParagraph = document.getElementById("about");
+    aboutParagraph.textContent = `${aboutMe.name} is a ${aboutMe.role} at ${aboutMe.company}, located in ${aboutMe.location}.`;
+  </script>
 </body>
 </html>
